@@ -56,7 +56,8 @@ if __name__ == "__main__":
                   "Trying more aggressive extraction...")
 
             # Add a little padding to the image on the edges (seems to be necessary
-            # for detecting some of the characters).
+            # for detecting some of the characters when the word is right
+            # up against the edges of the image).
             if not os.path.exists("padded"):
                 os.makedirs("padded")
             padded_path = os.path.join("padded", file)
