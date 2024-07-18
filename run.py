@@ -10,8 +10,6 @@ Word = namedtuple("Word", "text l t r b")
 
 
 def extract_text(image_path, config=r''):
-    " Probably returns one box per character, not text as an entire line. "
-
     data = pytesseract.image_to_data(
             Image.open(image_path),
             output_type=pytesseract.Output.DICT
